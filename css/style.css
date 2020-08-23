@@ -1,0 +1,16 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box; 
+}
+a{text-decoration: none;}
+.container{
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 1%; 
+}
+.w50{width: 50%;}
+.w30{width: 30%;}
+.clear{clear: both;}
+													/*Header*/
+
