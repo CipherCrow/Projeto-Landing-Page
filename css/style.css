@@ -11,7 +11,7 @@ a{text-decoration: none;}
 	padding: 0 1%; 
 }
 .w50{width: 50%;}
-.w30{width: 32%;}
+.w30{width: 31%;}
 .clear{clear: both;}
 																						/*Header*/
 
@@ -154,4 +154,33 @@ section.apresentacao{
 
 																					/*Sessão vitrine*/
 
-																				
+section.vitrine{
+	padding: 60px 0;
+}
+.vitrine > .container h2{
+
+	margin-bottom: 30px;
+	font-weight: normal;
+	font-size: 21px;
+	text-align: center;
+}	
+.vitrine > .container > .vitrine-itens{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	text-align: center;
+}
+.single-item i{
+	font-size: 50px;
+	color: #212333;
+}
+.single-item h2{
+	margin: 10px 0;
+	font-weight: normal;
+	font-size: 21px;
+}
+.single-item p{
+	margin: 10px 0;
+	font-weight: normal; 
+	font-size: 16px;
+}
