@@ -1,7 +1,8 @@
 *{
 	padding: 0px;
 	margin: 0px;
-	box-sizing: border-box; 
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif; 
 }
 a{text-decoration: none;}
 .container{
@@ -20,7 +21,7 @@ header{
 }
 header div a > h2{
 	color: white;
-	font-size: 23px;
+	font-size: 21px;
 	font-weight: lighter;
 	padding: 0 10px;
 }
@@ -45,6 +46,11 @@ section.principal{
 	background-color: rgba(0,0,0,0.4);
 	z-index: 0;
 }
+section.principal > .container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
 
 .banner{
 	position: relative;
@@ -54,7 +60,7 @@ section.principal{
 .banner-overlay{
 	position: absolute;
 	width: 100%;
-	height: 100%;
+	height: 90%;
 	top: 0;
 	left: 0;
 	background-color: rgba(33,35,67,0.6);
@@ -76,37 +82,48 @@ section.principal{
 
 .formulario{position: relative;z-index: 1;}
 .formulario > form{
-	border: 12px solid gray;
+	position: relative;
+	top: -15%;
+	width: 100%;
+	height: calc(100% + 30%);
+	border: 12px solid #ccc;
 	background-color: white;
 	padding: 15px;
 }
-.formulario > form label,p{
+form > .input-field label,h2,p{
 	margin: 10px 0;
 	font-size: 18px;
 	font-weight: normal;
 	color: gray;
 }
-.formulario p{
-	font-size: 20px;
+form h2{
+	text-align: center;
+	font-size: 21px;
 	border-bottom: 4px dotted gray;
 	padding-bottom: 10px;
 }
-.formulario > form input:not([type=submit]){
+form > .input-field input:not([type=submit]){
 	border: 1px solid #ccc;
 	border-left: 4px solid gray;
 	width: 100%;
-	height: 30px;
-	margin: 10px 0;
+	height: 40px;
 	padding: 0 10px;
 	font-size: 16px;
 	font-weight: lighter;
 }
-.formulario > form input[type=submit]{
-	width: 20%;
-	height: 30px;
+.submit-field{
+	text-align: center;
+}
+form input[type=submit]{
+	display: inline-block;
+	width: 60%;
+	height: 50px;
 	background-color: #212343;
 	color: white; 
 	border: 1px solid #ccc;
 	cursor: pointer;
-	font-size: 17px;
+	font-size: 25px;
+}
+form input[type=submit]:hover{
+	background-color: #212333;
 }
