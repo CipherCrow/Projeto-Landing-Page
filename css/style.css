@@ -19,7 +19,7 @@ header{
 	background-color: #212343 ;
 	padding: 10px 0;
 }
-header div a > h2{
+header > .container a > h2{
 	color: white;
 	font-size: 21px;
 	font-weight: lighter;
@@ -184,3 +184,16 @@ section.vitrine{
 	font-weight: normal; 
 	font-size: 16px;
 }
+																				/*Footer*/
+
+footer{
+	border-top: 3px solid #ddd;
+	padding: 25px 0;
+}
+footer > .container{
+	text-align: center;
+}
+footer > .container p{
+	font-size: 16px;
+	font-weight: normal;
+}																				
