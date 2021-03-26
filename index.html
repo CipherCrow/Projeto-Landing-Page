@@ -17,7 +17,11 @@
 
 </head>
 <body>
-	<header>
+	<div class="preloader">
+		<div class="icone"></div>
+	</div> <!-- preloader -->
+
+	<header id="topo">
 		<div class="container">
 			<a href="index.html">
 				<h2>Danki.Code</h2>
@@ -114,5 +118,20 @@
 
 		</div> <!-- container -->
 	</footer>
+
+	<a id="toTop" href="#topo">
+		<p>topo</p>
+		<i class="fas fa-arrow-up"></i>
+	</a> <!-- para o infinito e além -->
+
+	<script type="text/javascript">
+		let preloader = document.querySelector(".preloader");
+		window.addEventListener('load',function(){
+			preloader.style.opacity= '0';
+			setTimeout(function(){
+				preloader.style.display= 'none';
+			}, 300);
+		});
+	</script>
 </body>
 </html>
