@@ -23,10 +23,15 @@ header{
 	padding: 1rem 0;
 }
 header > .container a > h2{
+	display: inline-block;
 	color: white;
 	font-size: 2.1rem;
 	font-weight: lighter;
 	padding: 0 1rem;
+}
+header > .container a > h2:hover{
+	opacity: .6;
+	transition: .3s;
 }
 																						/*Banner principal*/
 
@@ -68,6 +73,7 @@ section.principal > .container{
 	left: 0;
 	background-color: rgba(33,35,67,0.6);
 	z-index: 0;
+	animation:cheguei .5s forwards;
 }
 .banner ul{
 	position: relative;
@@ -79,6 +85,28 @@ section.principal > .container{
 	font-weight: normal;
 	list-style: inside;
 	padding: 1.2rem;
+	text-shadow: 0 .2rem .3rem rgba(0,0,0,.5);
+	animation: cheguei 1.3s forwards;
+	opacity: 0;
+}
+.banner ul>li:nth-child(1){
+	animation-delay: .5s;
+}
+.banner ul>li:nth-child(2){
+	animation-delay: .7s;
+}
+.banner ul>li:nth-child(3){
+	animation-delay: .9s;
+}
+
+@keyframes cheguei{
+	0%{
+		transform: translateY(30rem) rotateY(80deg);
+	}
+	100%{
+		transform: translateY(0rem) rotateY(0deg);
+		opacity: 1;
+	}
 }
 
 													/*Formulario*/
@@ -87,12 +115,23 @@ section.principal > .container{
 .formulario > form{
 	position: relative;
 	top: -5rem;
+	opacity: 0;
 	width: 40rem;
 	height: calc(100% + 10rem);
 	border: 12px solid rgba(120,120,120,0.5);
 	background-color: white;
 	background-clip: padding-box;
 	padding: 1.5rem;
+	animation: cadastro 1s forwards;
+}
+@keyframes cadastro{
+	0%{
+		transform: translateX(40rem);
+	}
+	100%{
+		transform: translateX(0rem);
+		opacity: 1;
+	}
 }
 form > .input-field label, form h2, form p{
 	margin: 1rem 0;
@@ -115,6 +154,7 @@ form > .input-field input:not([type=submit]){
 	margin: 1rem 0;
 	font-size: 1.6rem;
 	font-weight: lighter;
+	outline: none;
 }
 .submit-field{
 	text-align: center;
@@ -130,7 +170,8 @@ form input[type=submit]{
 	font-size: 2.5rem;
 }
 form input[type=submit]:hover{
-	background-color: #212333;
+	opacity: .92;
+	transition: .2s;
 }
 																					/*sessão apresentacao*/
 
@@ -153,6 +194,18 @@ section.apresentacao{
 	bottom: -6rem;
 	color: #212333;
 	font-size: 6rem;
+	animation: look 3s infinite;
+}
+@keyframes look{
+	0%{
+		transform: scale(100%);
+	}
+	50%{
+		transform: scale(120%);
+	}
+	100%{
+		transform: scale(100%);
+	}
 }
 
 																					/*Sessão vitrine*/
@@ -176,6 +229,26 @@ section.vitrine{
 .single-item i{
 	font-size: 5rem;
 	color: #212333;
+}
+.single-item i:hover{
+	animation:shake .4s;
+}
+@keyframes shake{
+	0%{
+		transform: rotateZ(0deg);	
+	}
+	30%{
+		transform: rotateZ(50deg)scale(120%);	
+	}
+	50%{
+		transform: scale(100%);
+	}
+	70%{
+		transform: rotateZ(-50deg)scale(120%);	
+	}
+	100%{
+		transform: rotateZ(0deg) scale(100%);		
+	}
 }
 .single-item h2{
 	margin: 1rem 0;
@@ -204,6 +277,12 @@ footer > .container p{
 					/*responsivo*/
 
 @media screen and (max-width: 850px){
+	header > .container{
+		text-align: center;
+	}
+	header > .container a h2{
+		display: inline-block;
+	}
 	.w50{
 		width: 100%;
 	}
